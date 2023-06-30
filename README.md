@@ -1,14 +1,18 @@
 # 謎乃明朝
 謎乃明朝(NazonoMincho)は[花園明朝](http://fonts.jp/hanazono/)と同じく[GlyphWiki](https://glyphwiki.org/wiki/GlyphWiki:%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8)に登録されている漢字データをもとに作成されたフリーフォントです。
 オリジナルの花園明朝との主な違いは以下の通りです。
-- グリフデータの生成に https://github.com/kamichikoichi/kage-engine ではなく https://github.com/ge9/kage-engine-2 を使用
-  - 曲線部分のデータを折れ線ではなく3次ベジェ曲線で表現
-  - ハネの曲線化、縦画のコブのサイズ増加など
-- いくつかのカスタマイズ部品の使用による見た目の改善（犭や氵など）
-- 最新のUnicode15.0、IVDの2022-09-13改正などに対応
-- Light, Regular, Mediumの3ウェイトを提供
-  - DemiBoldは、ビルドは可能だが、ストロークが太くなるため見た目に課題があり準備中
 - 英数字、ひらがな、カタカナ、々〆〇等の非漢字の収録無し（一部の囲み記号など含めて現在検討中）
+- 最新のUnicode15.0、IVDの2022-09-13改正などに対応
+- 4つの書体を提供
+  - 従来のKAGE engine（[kurgmさんのTypeScript版](https://github.com/kurgm/kage-engine)）を使用した"Classic"
+    - （グリフの高さなどを除けば）従来の花園明朝と同様の形状
+  - 改変したKAGE engine https://github.com/ge9/kage-engine-2 による"Light", "Regular", "Medium"の3ウェイト
+    - 曲線部分のデータを折れ線ではなく3次ベジェ曲線で表現
+    - ハネの曲線化、縦画のコブのサイズ増加など
+    - いくつかのカスタマイズ部品の使用による見た目の改善（犭や氵など）
+    - DemiBoldの提供も検討しているが、ストロークが太くなるため見た目に課題があり準備中
+- PostScriptアウトラインのOpenTypeフォントと、ヒント命令が付加されたTrueTypeフォントの2フォーマットで提供
+  - 後者は小さいサイズでもビットマップフォントのようにくっきり表示されるが、サイズが大きい。基本的には前者を推奨。
 
 # 収録グリフ
 OpenTypeフォントの仕様上、1フォントに65535文字までしか入らないため、「謎乃明朝」「謎乃明朝+」の2つに分かれています。日本で通常使われる漢字のほとんどは「謎乃明朝」のほうに入っています。
@@ -20,8 +24,8 @@ OpenTypeフォントの仕様上、1フォントに65535文字までしか入ら
 - 康煕部首・CJK部首補助
 - CJK互換漢字・CJK互換漢字補助（SVSによる利用にも対応）
 - IVDの異体字（IVSによる利用に対応）
-- 源ノ角ゴシックに含まれる全てのCJK統合漢字
 - SVS・IVSが定義されている全てのCJK統合漢字
+- [Source Han Sans](https://github.com/adobe-fonts/source-han-sans)（源ノ角ゴシック）に含まれる全てのCJK統合漢字
 
 これはメイリオや源ノ明朝に収録されている全ての漢字を含みます。合計50000グリフ程度です。
 
@@ -38,4 +42,4 @@ OpenTypeフォントの仕様上、1フォントに65535文字までしか入ら
 これは実験的なリリースであり、生成エンジン・スクリプトに不具合が含まれている可能性があります。また、元になっているGlyphWikiのデータは誰でも編集可能であり、漢字データや生成プログラムの表現力の不足により不自然なデザインになっている字もあります。十分注意のうえご利用ください。
 
 # 技術的情報
-- フォントデータの生成には[AFDKO](https://github.com/adobe-type-tools/afdko)を使用しています。生成に用いたスクリプト等、詳細はいずれ公開予定です。
+- パスの統合（Union）に[Inkscape](https://inkscape.org/)（Classic以外）と[js-angusj-clipper](https://github.com/xaviergonz/js-angusj-clipper)（Classic）、パスの単純化に[FontForge](https://fontforge.org/)（Classic以外）、フォントデータの生成には[AFDKO](https://github.com/adobe-type-tools/afdko)を使用しています。生成に用いたスクリプト等、詳細はいずれ公開予定です。

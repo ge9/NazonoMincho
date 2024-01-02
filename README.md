@@ -39,7 +39,8 @@ OpenTypeフォントの仕様上、1フォントに65535文字までしか入ら
 
 漢字のみのフォントであるため、他の日本語フォントとの併用を主に想定しています。その際に役立つ情報などは今後追加予定です。
 
-これは実験的なリリースであり、生成エンジン・スクリプトに不具合が含まれている可能性があります。また、元になっているGlyphWikiのデータは誰でも編集可能であり、漢字データや生成プログラムの表現力の不足により不自然なデザインになっている字もあります。十分注意のうえご利用ください。
+これは実験的なリリースであり、不具合が含まれている可能性があります。また、元になっているGlyphWikiのデータは誰でも編集可能であり、漢字データや生成プログラムの表現力の不足により不自然なデザインになっている字もあります。十分注意のうえご利用ください。
 
 # 技術的情報
-- パスの統合（Union）に[Inkscape](https://inkscape.org/)（Classic以外）と[js-angusj-clipper](https://github.com/xaviergonz/js-angusj-clipper)（Classic）、パスの単純化に[FontForge](https://fontforge.org/)（Classic以外）、フォントデータの生成には[AFDKO](https://github.com/adobe-type-tools/afdko)を使用しています。生成に用いたスクリプト等、詳細はいずれ公開予定です。
+- 生成に用いたスクリプト群は[ge9/kage-afdko-toolkit: Building Fonts from KAGE Data with AFDKO](https://github.com/ge9/kage-afdko-toolkit)に公開してあります。
+- パスの統合（Union）に[Inkscape](https://inkscape.org/)（Classic以外）と[js-angusj-clipper](https://github.com/xaviergonz/js-angusj-clipper)（Classic）、パスの単純化に[FontForge](https://fontforge.org/)（Classic以外）、フォントデータの生成には[AFDKO](https://github.com/adobe-type-tools/afdko)を使用しています。

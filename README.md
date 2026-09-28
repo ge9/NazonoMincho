@@ -1,16 +1,15 @@
 # 謎乃明朝
 謎乃明朝(NazonoMincho)は[花園明朝](http://fonts.jp/hanazono/)（およびその後継の[字雲フォント](https://kamichikoichi.github.io/jigmo/)）と同じく[GlyphWiki](https://glyphwiki.org/wiki/GlyphWiki:%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8)に登録されている漢字データをもとに作成されたフリーフォントです。
-オリジナルの花園明朝との主な違いは以下の通りです。
-- 英数字、ひらがな、カタカナ、々〆〇等の非漢字の収録無し（一部の囲み記号など含めて現在検討中）
-- 最新(2025-09現在)のUnicode17.0.0、IVDの2025-07-14改正などに対応
+オリジナルの花園明朝(およびその更新版の[Jigmoフォント](https://kamichikoichi.github.io/jigmo/))との主な違いは以下の通りです。
+- 丸囲み漢字など一部の例外を除いて、英数字、ひらがな、カタカナ等の非漢字の収録は無し
 - 4つの書体を提供
-  - 従来のKAGE engine（[kurgmさんのTypeScript版](https://github.com/kurgm/kage-engine)）を使用した"Classic"
+  - 従来のKAGE engine（[kurgmさんのTypeScript版](https://github.com/kurgm/kage-engine)）を使用した"**Classic**"
     - （グリフの高さなどを除けば）従来の花園明朝と同様の形状
-  - 改変したKAGE engine https://github.com/ge9/kage-engine-2 による"Light", "Regular", "Medium"の3ウェイト
+  - 改変したKAGE engine https://github.com/ge9/kage-engine-2 による"**Light**", "**Regular**", "**Medium**"の3ウェイト
     - 曲線部分のデータを折れ線ではなく3次ベジェ曲線で表現
     - ハネの曲線化、縦画のコブのサイズ増加など
     - いくつかのカスタマイズ部品の使用による見た目の改善（犭や氵や阝など）
-    - DemiBoldの提供も検討しているが、ストロークが太くなるため見た目に課題があり準備中
+    - DemiBoldの提供も検討しているが、ストロークが太くなるため見た目に課題があり現在準備中
 - PostScriptアウトラインのOpenTypeフォントと、ヒント命令が付加されたTrueTypeフォントの2フォーマットで提供
   - 後者は小さいサイズでもビットマップフォントのようにくっきり表示されるが、サイズが大きい。基本的には前者を推奨。
 # 字形変化の例
@@ -31,6 +30,8 @@ OpenTypeフォントの仕様上、1フォントに65535文字までしか入ら
 - IVDの異体字（IVSによる利用に対応）
 - SVS・IVSが定義されている全てのCJK統合漢字
 - [Source Han Sans](https://github.com/adobe-fonts/source-han-sans)（源ノ角ゴシック）に含まれる全てのCJK統合漢字
+- 「CJKの筆画」ブロックとそのSVS
+- 丸囲み漢字・麻雀など一部の非漢字（[参照](https://github.com/ge9/kage-afdko-toolkit/blob/main/config/ucs-main.range)）
 
 これはメイリオや源ノ明朝に収録されている全ての漢字を含みます。合計54000グリフ程度です。
 
